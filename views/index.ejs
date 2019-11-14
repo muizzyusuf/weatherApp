@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-1">Weather Application</h1>
+        <p class="lead">
+            A simple weather app made with nodeJs, bootstrap, ejs and Dark Sky api
+        </p>
+    </div>
+  
+
+    <div class="d-flex justify-content-center align-items-center container">
+
+        <form action="/" method="post">
+            <div class="row">
+                <div class="col">
+                    <input name="lat" type="text" class="form-control" placeholder="Enter latitude" required>
+                </div>
+                <div class=col>
+                    <input name="long" type="text" class="form-control" placeholder="Enter longitude" required>
+                </div>
+                <div class="col">
+                    <input type="submit" class="btn btn-primary" value="Get Weather">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <% if(locals.weather){ %>
+        <p class="display-3 text-center"><%= weather %></p>
+        <% } %>
+
+        <% if(locals.error){ %>
+        <p class="display-3 text-center"><%= error %></p>
+        <% } %>
+</body>
+
+</html>
