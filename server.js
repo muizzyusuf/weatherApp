@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 app.post('/', function (req, res) {
     let long = req.body.long;
     let lat = req.body.lat;
-    let url = `https://api.darksky.net/forecast/c23cdd4dddd57394d9cfeebc94bcf898/${lat},${long}`;
+    let url = `https://api.darksky.net/forecast/*****************************/${lat},${long}`;
     
   
     request(url, function (err, response, body) {
